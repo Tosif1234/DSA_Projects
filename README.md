@@ -21,7 +21,7 @@ This C++ program takes a student's score as input, calculates the corresponding 
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](Grade Calculator/Grade-calc.png)
+![Program Output](Grade%20Calculator/Grade-calc.png)
 
 ## 📸 Sample Output Screenshot
 
