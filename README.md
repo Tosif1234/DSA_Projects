@@ -22,7 +22,7 @@ To print a sequence of uppercase alphabets starting from 'A', skipping 3 letters
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/alphabet-skipper.png)
+![Program Output](/Looper/images/alphabet-skipper.png)
 
 ### Code:
 ```cpp
