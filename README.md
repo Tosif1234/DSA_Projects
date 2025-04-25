@@ -47,7 +47,7 @@ int main(){
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/output1.png)
+![Program Output](/Looper/images/output1.png)
 
 
 
@@ -81,7 +81,7 @@ To take an integer input from the user, extract the **first** and **last** digit
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/digit-addition.png)
+![Program Output](/Looper/images/digit-addition.png)
 
 ### Code:
 ```cpp
@@ -118,7 +118,7 @@ int main(){
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/output3.png)
+![Program Output](/Looper/images/output3.png)
 
 
 # 3. Digit Addition
@@ -152,7 +152,7 @@ To take a number from the user and calculate the **sum of its individual digits*
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/digit-counter.png)
+![Program Output](/Looper/images/digit-counter.png)
 
 
 ### Code:
@@ -181,7 +181,7 @@ int main(){
 
 Below is an actual run of the program in the terminal:
 
-![Program Output](images/output3.png)
+![Program Output](/Looper/images/output3.png)
 
 
 
