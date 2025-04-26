@@ -28,9 +28,9 @@ Below is an actual run of the program in the terminal:
 Below is an actual run of the program in the terminal:
 Input:94
 
-![Program Output](images/A.png)
+![Program Output](Grade%20Calculator/images/A.png)
 Input:33
-![Program Output](images/F.png)
+![Program Output](Grade%20Calculator/images/F.png)
 
 
 
