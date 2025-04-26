@@ -26,6 +26,7 @@ Below is an actual run of the program in the terminal:
 ## 📸 Sample Output Screenshot
 
 Below is an actual run of the program in the terminal:
+
 Input:94
 
 ![Program Output](Grade%20Calculator/images/A.png)
@@ -38,7 +39,7 @@ Input:33
 
 
 ##  Our Code
-
+```cpp
 #include<iostream>
 using namespace std;
 
@@ -100,5 +101,6 @@ int main(){
 
     return 0;
 }
+```
 
 
