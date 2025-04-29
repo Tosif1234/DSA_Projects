@@ -1,4 +1,4 @@
-#  Grade Checker in C++
+#  Pjoject 3 Circlet
 
 This C++ program takes a student's score as input, calculates the corresponding grade using a **ternary operator**, and displays a custom comment using a **switch statement**.
 
