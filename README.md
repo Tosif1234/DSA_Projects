@@ -1,4 +1,4 @@
-#  Pjoject 3 Circlet
+#  Project 3 Circlet
 
 ## Q.1 Develop a program that prints the given Right half triangle pattern using a nested for loop.
 
