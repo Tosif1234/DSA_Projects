@@ -10,14 +10,16 @@ using namespace std;
 int main(){
 
     int size , i;
-    int a[5];
 
     cout << "Enter the array's size : ";
     cin >> size;
 
+    int a[size];
+
+    cout << "Enter array's Elements : " << endl;
     for ( i = 0; i < size; i++)
     {
-        cout << "Enter the element of array : ";
+        cout << "a["<< i <<"]" <<" : ";
         cin >> a[i];
 
     }
@@ -53,13 +55,14 @@ using namespace std;
 int main(){
 
     int row, column , i ,j;
-    int a[5][5];
 
     cout << "Enter the array's Row size : ";
     cin >> row;
 
     cout << "Enter the array's Column size : ";
     cin >> column;
+
+    int a[row][column];
 
     cout << "Enter array's elements : " << endl;
     for ( i = 0; i < row; i++)
@@ -106,13 +109,15 @@ using namespace std;
 int main(){
 
     int row, column , i ,j;
-    int a[5][5];
+
 
     cout << "Enter the array's Row size : ";
     cin >> row;
 
     cout << "Enter the array's Column size : ";
     cin >> column;
+
+    int a[row][column];
 
     cout << "Enter array's elements : " << endl;
     for ( i = 0; i < row; i++)
