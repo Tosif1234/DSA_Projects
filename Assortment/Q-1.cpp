@@ -4,10 +4,12 @@ using namespace std;
 int main(){
 
     int size , i;
-    int a[5];
 
     cout << "Enter the array's size : ";
     cin >> size;
+
+    int a[size];
+    
     cout << "Enter array's Elements : " << endl;
     for ( i = 0; i < size; i++)
     {
