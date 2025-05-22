@@ -39,7 +39,7 @@ Below is an actual run of the program in the terminal:
 
 Output:
 
-![Program Output](Circlet/images/output-1.png)
+![Program Output](Assortment/images/output-1.png)
 
 
 ## Q.2 Largesst Element In 2D Array.
@@ -92,7 +92,7 @@ Below is an actual run of the program in the terminal:
 
 Output:
 
-![Program Output](Circlet/images/output-2.png)
+![Program Output](Assortment/images/output-2.png)
 
 
 ## Q.3 Transpose Of 2D Array.
@@ -144,7 +144,7 @@ Below is an actual run of the program in the terminal:
 
 Output:
 
-![Program Output](Circlet/images/output-3.png)
+![Program Output](Assortment/images/output-3.png)
 
 
 ## Q.4 Sum of Elements in Row & Column of 2D Array.
@@ -229,7 +229,7 @@ Below is an actual run of the program in the terminal:
 
 Output:
 
-![Program Output](Circlet/images/output-4.png)
+![Program Output](Assortment/images/output-4.png)
 
 
 
