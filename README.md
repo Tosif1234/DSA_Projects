@@ -1,106 +1,149 @@
-#  Grade Checker in C++
+#  Project 5 Calculator
+##  Our Code
+```cpp
+#include <iostream>
+using namespace std;
 
-This C++ program takes a student's score as input, calculates the corresponding grade using a **ternary operator**, and displays a custom comment using a **switch statement**.
+int Addition(int a, int b)
+{
+    return a + b;
+}
+int Subtraction(int a, int b)
+{
+    return a - b;
+}
+int Multiplication(int a, int b)
+{
+    return a * b;
+}
+int Division(int a, int b)
+{
+    if (b != 0)
+    {
+        return a / b;
+    }
+    else
+    {
+        cout << "Error: Division by zero!" << endl;
+        return 0;
+    }
+}
+int Modulus(int a, int b)
+{
+    if (b != 0)
+    {
+        return a % b;
+    }
+    else
+    {
+        cout << "Error: Division by zero!" << endl;
+        return 0;
+    }
+}
 
----
+int main()
+{
 
-##  Features
+    int choice, a, b;
 
-- Validates score input (must be between 0 and 100)
-- Calculates grade:
-  - A: 80 and above
-  - B: 70 - 79
-  - C: 60 - 69
-  - D: 50 - 59
-  - F: Below 50
-- Prints performance feedback using `switch-case`
--  Checks if you're eligible for the next level
+    do
+    {
+        cout << endl << "==== Calculator menu =====" << endl;
+        cout << "Press 1 for +" << endl;
+        cout << "Press 2 for -" << endl;
+        cout << "Press 3 for *" << endl;
+        cout << "Press 4 for /" << endl;
+        cout << "Press 5 for %" << endl;
+        cout << "Press 0 for Exit" << endl;
+        cout << endl;
 
----
-## 📸 Sample Our Flowchart
+        cout << "Enter your choice: ";
+        cin >> choice;
+        if (choice == 0)
+        {
+            cout << "Exiting the calculator." << endl;
+            return 0;
+        }
+        else if (choice >= 1 && choice <= 5)
+        {
+            cout << "Enter the First number: ";
+            cin >> a;
+            cout << "Enter the second number: ";
+            cin >> b;
+        }
+        else{
+            cout << "Invalid choice, please try again." << endl;
+        }
 
-Below is an actual run of the program in the terminal:
+        switch (choice)
+        {
 
-![Program Output](Grade%20Calculator/Grade-calc.png)
+        case 1:
+            cout << "Addition of " << a << " and " << b << " is " << Addition(a, b) << endl;
+            break;
 
+        case 2:
+            cout << "Subtraction of " << a << " and " << b << " is " << Subtraction(a, b) << endl;
+            break;
+
+        case 3:
+            cout << "Multiplication of " << a << " and " << b << " is " << Multiplication(a, b) << endl;
+            break;
+
+        case 4:
+            if (b != 0){
+                cout << "Divide of " << a << " and " << b << " is " << Division(a, b) << endl;
+            }
+            else{
+                Division(a, b);
+            }   
+            break;
+
+        case 5:
+            if (b != 0){
+                cout << "Modulus of " << a << " and " << b << " is " << Modulus(a, b) << endl;
+            }
+            else{
+                Modulus(a, b);
+            }
+            break;
+        }
+    } while (choice);
+    return 0;
+}
+
+```
 ## 📸 Sample Output Screenshot
 
 Below is an actual run of the program in the terminal:
 
-Input:94
+Output : Addition
 
-![Program Output](Grade%20Calculator/images/A.png)
+![Program Output](calculator/images/1.png)
 
-Input:33
+Output : Substraction
 
-![Program Output](Grade%20Calculator/images/F.png)
+![Program Output](calculator/images/2.png)
 
+Output : Multiplication
 
+![Program Output](calculator/images/3.png)
 
+Output : Division
 
-##  Our Code
-```cpp
-#include<iostream>
-using namespace std;
+![Program Output](calculator/images/4.png)
 
-int main(){
-    
-    int score;
-    char grade;
+Output : Modulus
 
-    cout << "Enter Your Score :";
-    cin >> score;
+![Program Output](calculator/images/5.png)
 
-    if (score < 0 || score > 100)
-    {
-        cout << "Invalid Score" << endl;
-        return 0;
-    }
-    
-    
-    grade=  (score>=80)? 'A':
-            (score>=70)? 'B':
-            (score>=60)? 'C':
-            (score>=50)? 'D': 'F';
+Output : Exit
 
-            
-    cout << "Your Grade Is " << grade <<".";
+![Program Output](calculator/images/6.png)
 
-    switch (grade)
-    {
-    case 'A':
-        cout << " Excellent Work!";
-        break;
-    case 'B':
-        cout << " Well Done";
-        break;
-    case 'C':
-        cout << " Good Job";
-        break;
-    case 'D':
-        cout << " You passed, but you could do better.";
-        break;
-    case 'F':
-        cout << " Sorry Your Failed";
-        break;
-        
-    
-    default:
-        cout << "Error" << endl;
-        break;
-    }
+Output : Wrong Choice
 
-    if ( grade == 'A' || grade == 'B' || grade == 'C' || grade == 'D' )
-    {
-        cout << " You are eligible for the next level.";
-    }
-    else{
-        cout << " Please try again next time.";
-    }
-    
+![Program Output](calculator/images/7.png)
 
-    return 0;
-}
-```
 
 
