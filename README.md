@@ -1,106 +1,175 @@
-#  Grade Checker in C++
+#  Project 7 Memomry Calculator
+##  Our Code
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
 
-This C++ program takes a student's score as input, calculates the corresponding grade using a **ternary operator**, and displays a custom comment using a **switch statement**.
+template <typename T1, typename T2>
+class MemoryCalculator
+{
+private:
+    T1 id;
+    T2 name;
 
----
+public:
+    MemoryCalculator()
+    {
+        cout << "Enter Student ID : ";
+        cin >> id;
+        cout << "Enter Student Name : ";
+        cin >> name;
+    }
 
-##  Features
+    void showDetails() const
+    {
 
-- Validates score input (must be between 0 and 100)
-- Calculates grade:
-  - A: 80 and above
-  - B: 70 - 79
-  - C: 60 - 69
-  - D: 50 - 59
-  - F: Below 50
-- Prints performance feedback using `switch-case`
--  Checks if you're eligible for the next level
+        cout << "Student ID : " << id << endl;
+        cout << "Student Name : " << name << endl;
+    }
 
----
-## 📸 Sample Our Flowchart
+    int getId()
+    {
+        return id;
+    }
+};
 
-Below is an actual run of the program in the terminal:
+int main()
+{
 
-![Program Output](Grade%20Calculator/Grade-calc.png)
+    vector<MemoryCalculator<int, string>> students;
+    int choice;
 
+    do
+    {
+        cout << endl
+             << "==== Student Managment System ====" << endl;
+        cout << "1. Add Student to list.." << endl;
+        cout << "2. Dispaly the list of Students.." << endl;
+        cout << "3. Remove a Student from the list by ID .." << endl;
+        cout << "4. Search for a Student by ID.." << endl;
+        cout << "0. Exit.." << endl;
+
+        cout << "Enter Your Coice : ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+        {
+            MemoryCalculator<int, string> newStudent;
+            students.push_back(newStudent);
+            break;
+        }
+        case 2:
+        {
+
+            cout << "=== Studet Deatils ===" << endl;
+            if (students.empty())
+            {
+                cout << "No Students In Lsit .." << endl;
+            }
+            else
+            {
+                for (int i = 0; i < students.size(); i++)
+                {
+                    cout << endl
+                         << "Student [" << i << "]" << endl;
+                    students[i].showDetails();
+                }
+            }
+            break;
+        }
+
+        case 3:
+        {
+            int deleteId;
+
+            cout << "Enter The Student Id For Remove : ";
+            cin >> deleteId;
+            int i;
+            for (i = 0; i < students.size(); i++)
+            {
+                if (students[i].getId() == deleteId)
+                {
+                    students.erase(students.begin() + i);
+                    cout << "Student with ID " << deleteId << " removed." << endl;
+                    break;
+                }
+                else if (i == students.size())
+                {
+                cout << "Student with ID " << deleteId << " not found." << endl;
+                }
+            }
+            
+            break;
+        }
+        case 4:
+        {
+            int matchedId;
+
+            cout << "Enter The Student Id For Search : ";
+            cin >> matchedId;
+            int i;
+            for (i = 0; i < students.size(); i++)
+            {
+                if (students[i].getId() == matchedId)
+                {
+                    cout << endl
+                         << "Student with ID " << matchedId << " Found.";
+                    cout << endl
+                         << "Student [" << i << "]" << endl;
+                    students[i].showDetails();
+                    break;
+                }
+            }
+            if (i == students.size())
+            {
+                cout << "Student with ID " << matchedId << " not found." << endl;
+            }
+            break;
+        }
+        
+        case 0:
+        {
+            cout << "Thank you for using Student Management System.." << endl;
+            break;
+        }
+
+        default:
+            cout << "Invalid Choice! Please try again.." << endl;
+
+            break;
+        }
+
+    } while (choice != 0);
+
+    return 0;
+}
+
+
+```
 ## 📸 Sample Output Screenshot
 
 Below is an actual run of the program in the terminal:
 
-Input:94
+Output : Adding Student
 
-![Program Output](Grade%20Calculator/images/A.png)
+![Program Output](Memory-Calculator/images/1.png)
 
-Input:33
+Output : Display Students
 
-![Program Output](Grade%20Calculator/images/F.png)
+![Program Output](Memory-Calculatorimages/2.png)
+
+Output : Remove Student
+
+![Program Output](Memory-Calculatorimages/3.png)
+
+Output : Search Student
+
+![Program Output](Memory-Calculator/images/4.png)
 
 
 
-
-##  Our Code
-```cpp
-#include<iostream>
-using namespace std;
-
-int main(){
-    
-    int score;
-    char grade;
-
-    cout << "Enter Your Score :";
-    cin >> score;
-
-    if (score < 0 || score > 100)
-    {
-        cout << "Invalid Score" << endl;
-        return 0;
-    }
-    
-    
-    grade=  (score>=80)? 'A':
-            (score>=70)? 'B':
-            (score>=60)? 'C':
-            (score>=50)? 'D': 'F';
-
-            
-    cout << "Your Grade Is " << grade <<".";
-
-    switch (grade)
-    {
-    case 'A':
-        cout << " Excellent Work!";
-        break;
-    case 'B':
-        cout << " Well Done";
-        break;
-    case 'C':
-        cout << " Good Job";
-        break;
-    case 'D':
-        cout << " You passed, but you could do better.";
-        break;
-    case 'F':
-        cout << " Sorry Your Failed";
-        break;
-        
-    
-    default:
-        cout << "Error" << endl;
-        break;
-    }
-
-    if ( grade == 'A' || grade == 'B' || grade == 'C' || grade == 'D' )
-    {
-        cout << " You are eligible for the next level.";
-    }
-    else{
-        cout << " Please try again next time.";
-    }
-    
-
-    return 0;
-}
-```
 
 
