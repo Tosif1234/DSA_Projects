@@ -1,106 +1,241 @@
-#  Grade Checker in C++
+#  Project 9 : Escalator (Stack)
+##  Our Code
+```cpp
+#include <iostream>
+using namespace std;
 
-This C++ program takes a student's score as input, calculates the corresponding grade using a **ternary operator**, and displays a custom comment using a **switch statement**.
+class Stack
+{
+public:
+    virtual void Push(int ele) = 0;
+    virtual void Pop() = 0;
+    virtual void Top() = 0;
+    virtual void Display() = 0;
+    virtual void isEmpty() = 0;
+    virtual void isFull() = 0;
+    virtual ~Stack() {}
+};
 
----
+class StackMethods : public Stack
+{
 
-##  Features
+private:
+    int *arr;
+    int size;
+    int top;
 
-- Validates score input (must be between 0 and 100)
-- Calculates grade:
-  - A: 80 and above
-  - B: 70 - 79
-  - C: 60 - 69
-  - D: 50 - 59
-  - F: Below 50
-- Prints performance feedback using `switch-case`
--  Checks if you're eligible for the next level
+public:
+    StackMethods(int size)
+    {
+        this->size = size;
+        arr = new int[size];
+        top = -1;
+    }
 
----
-## 📸 Sample Our Flowchart
+    void Push(int ele) override
+    {
 
-Below is an actual run of the program in the terminal:
+        if (top == size - 1)
+        {
+            cout << "Stack Is Full..." << endl;
+        }
+        else
+        {
+            top++;
+            arr[top] = ele;
+            cout << "Element Pushed Successfully..." << endl;
+        }
+    }
+    void Pop() override
+    {
+        
+        if (top == -1)
+        {
+            cout << "Stack Is Empty..." << endl;
+        }
+        else
+        { 
+            cout  << arr[top]<< " Poped Successfully..." << endl;
+            top--;
+        }
+    }
+    void Top() override
+    {
+        if (top == -1)
+        {
+            cout << "Stack Is Empty..." << endl;
+        }
+        else
+        { 
+            cout << "Top Element is : " << arr[top] << endl;
+        }
+    }
+    void Display() override
+    {
+        if (top == -1)
+        {
+            cout << "Stack Is Full..." << endl;
+        }
+        else
+        {
+            cout << "Your Stack Is : ";
 
-![Program Output](Grade%20Calculator/Grade-calc.png)
+            for (int i = top; i >= 0; i--)
+            {
+                cout << arr[i] << " ";
+            }
+            cout << endl;
+        }
+    }
+    void isEmpty() override
+    {
+        if (top == -1)
+        {
+            cout << "Stack Is Empty...." << endl;
+        }
+        else{
+            cout << "Stack Is Not Empty..." << endl;
+        }
+    }
+    void isFull() override
+    {
+        if (top == size -1)
+        {
+            cout << "Stack Is Full...." << endl;
+        }
+        else{
+            cout << "Stack Is Not Full..." << endl;
+        }
+    }
+    ~StackMethods()
+    {
+        delete[] arr;
+    }
+};
 
+int main()
+{
+
+    int choice, size, element;
+
+    cout << "Enter The Size Of Stack : ";
+    cin >> size;
+
+    Stack *stack = new StackMethods(size);
+
+    do
+    {
+        cout << "==== Stack Menu ====" << endl;
+        cout << "1. Push An Element " << endl;
+        cout << "2. Pop An Element " << endl;
+        cout << "3. Display Top Element " << endl;
+        cout << "4. Display All Stack Elements" << endl;
+        cout << "5. Check If Stack IS Empty" << endl;
+        cout << "6. Check If Stack IS Full" << endl;
+        cout << "0. Exit.." << endl;
+
+        cout << "Enter Your Choice : ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+
+            cout << "Enter The Element : ";
+            cin >> element;
+
+            stack->Push(element);
+
+            break;
+        case 2:
+
+            stack->Pop();
+
+            break;
+        case 3:
+
+            stack->Top();
+
+            break;
+        case 4:
+
+            stack->Display();
+
+            break;
+        case 5:
+
+            stack->isEmpty();
+
+            break;
+        case 6:
+
+            stack->isFull();
+
+            break;
+        case 0:
+
+            cout << "Thank You..." << endl;
+
+            break;
+
+        default:
+            cout << "Invalid Choice...Please try Again..."<< endl;
+            break;
+        }
+    } while (choice != 0);
+
+    return 0;
+}
+
+
+```
 ## 📸 Sample Output Screenshot
 
 Below is an actual run of the program in the terminal:
 
-Input:94
+1.Push An Element 
 
-![Program Output](Grade%20Calculator/images/A.png)
+Output : 
 
-Input:33
+![Program Output](Escalator/images/1.png)
 
-![Program Output](Grade%20Calculator/images/F.png)
+2.Pop An Element 
+
+Output : 
+
+![Program Output](Escalator/images/2.png)
+
+3.Display Top Element 
+
+Output : 
+
+![Program Output](Escalator/images/3.png)
+
+4.Display All Stack Element
+
+Output : 
+
+![Program Output](Escalator/images/4.png)
+
+5.Check If Stack IS Empty
+
+Output : 
+
+![Program Output](Escalator/images/5.png)
+
+6.Check If Stack IS Full 
+
+Output : 
+
+![Program Output](Escalator/images/6.png)
+
+0.Exit..
+
+Output : 
+
+![Program Output](Escalator/images/7.png)
 
 
 
-
-##  Our Code
-```cpp
-#include<iostream>
-using namespace std;
-
-int main(){
-    
-    int score;
-    char grade;
-
-    cout << "Enter Your Score :";
-    cin >> score;
-
-    if (score < 0 || score > 100)
-    {
-        cout << "Invalid Score" << endl;
-        return 0;
-    }
-    
-    
-    grade=  (score>=80)? 'A':
-            (score>=70)? 'B':
-            (score>=60)? 'C':
-            (score>=50)? 'D': 'F';
-
-            
-    cout << "Your Grade Is " << grade <<".";
-
-    switch (grade)
-    {
-    case 'A':
-        cout << " Excellent Work!";
-        break;
-    case 'B':
-        cout << " Well Done";
-        break;
-    case 'C':
-        cout << " Good Job";
-        break;
-    case 'D':
-        cout << " You passed, but you could do better.";
-        break;
-    case 'F':
-        cout << " Sorry Your Failed";
-        break;
-        
-    
-    default:
-        cout << "Error" << endl;
-        break;
-    }
-
-    if ( grade == 'A' || grade == 'B' || grade == 'C' || grade == 'D' )
-    {
-        cout << " You are eligible for the next level.";
-    }
-    else{
-        cout << " Please try again next time.";
-    }
-    
-
-    return 0;
-}
-```
 
 
