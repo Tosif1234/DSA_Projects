@@ -1,4 +1,4 @@
-## Sorting & Searching Console App (C++)
+## Project 10 : Sorting & Searching Console App (C++)
 
 This is a simple C++ console-based application for demonstrating **Sorting** and **Searching** algorithms using an array. It allows the user to input data and then apply various algorithms interactively.
 
@@ -9,9 +9,21 @@ This is a simple C++ console-based application for demonstrating **Sorting** and
 - Selection Sort
 - Merge Sort
 - Linear Search
-- Binary Search
+- Binary Search with sorted check  
 - Array Display
+- Avoids re-sorting  
+- Clean, menu-driven program
 - Validation: Checks if array is sorted before applying Binary Search
+
+---
+
+## Overview
+
+This C++ program allows users to:
+- Perform **sorting** (Selection Sort & Merge Sort)
+- Perform **searching** (Linear Search & Binary Search)
+- **Display** the current array
+- Check if the array is already sorted before sorting or binary searching
 
 ---
 
@@ -25,8 +37,20 @@ This is a simple C++ console-based application for demonstrating **Sorting** and
 | Binary Search    | Searching   | Searches by dividing the sorted array              |
 
 ---
+## Functions
 
-## Sample Input/Output
+| Function         | Description                                           |
+|------------------|-------------------------------------------------------|
+| `slectionSort()` | Sorts array using selection sort                      |
+| `mergeSort()`    | Sorts array using recursive merge sort                |
+| `merge()`        | Helper to merge two sorted subarrays                  |
+| `linearSearch()` | Finds element by linear search                        |
+| `binarySearch()` | Searches key using binary search (sorted check added) |
+| `isSorted()`     | Returns true if array is sorted in ascending order    |
+| `display()`      | Prints the current array                              |
+
+---
+## Our Code
 
 ```cpp
 
@@ -192,13 +216,25 @@ int main (){
         switch (choice)
         {
         case 1:
+            if (isSorted(arr,size))
+            {
+            cout << "Your Array Is Already Sorted..." << endl;
+            }
+            else{
             slectionSort(arr,size);
             cout << "Selection Sorted Secessfully...." << endl;
-
+            }
             break;
         case 2:
+            if (isSorted(arr,size))
+            {
+            cout << "Your Array Is Already Sorted..." << endl;
+            }
+            else{
             mergeSort(arr,0,size-1);
             cout << "Merge Sorted Secessfully...." << endl;
+            }
+            
 
             break;
         case 3:
@@ -233,44 +269,58 @@ int main (){
 
 Below is an actual run of the program in the terminal:
 
-1.Push An Element 
+1.Insert Array 
 
 Output : 
 
-![Program Output](Escalator/images/1.png)
+![Program Output](Categorizing/images/1.png)
 
-2.Pop An Element 
-
-Output : 
-
-![Program Output](Escalator/images/2.png)
-
-3.Display Top Element 
+3.Selection Sort
 
 Output : 
 
-![Program Output](Escalator/images/3.png)
+![Program Output](Categorizing/images/2.png)
 
-4.Display All Stack Element
+if Alerdy Sorted...
 
-Output : 
+![Program Output](Categorizing/images/2-1.png)
 
-![Program Output](Escalator/images/4.png)
-
-5.Check If Stack IS Empty
+3.Merge Sort
 
 Output : 
 
-![Program Output](Escalator/images/5.png)
+![Program Output](Categorizing/images/3.png)
 
-6.Check If Stack IS Full 
+if Alerdy Sorted...
+
+![Program Output](Categorizing/images/2-1.png)
+
+4.Linear Seach( No need Sorted Array )
 
 Output : 
 
-![Program Output](Escalator/images/6.png)
+![Program Output](Categorizing/images/4.png)
+
+5.Binary Search If Array Is Not Sorted...
+
+Output :
+
+![Program Output](Categorizing/images/6-1.png)
+
+If Array is sorted...
+
+Output : 
+
+![Program Output](Categorizing/images/5.png)
+
+6.Display Array
+
+Output : 
+
+![Program Output](Categorizing/images/6.png)
 
 0.Exit..
 
 Output : 
 
-![Program Output](Escalator/images/7.png)
+![Program Output](Categorizing/images/7.png)
