@@ -1,4 +1,4 @@
-## Project 10 : Sorting & Searching Console App (C++)
+## Project 10 : Categorizing (Sorting & Searching)
 
 This is a simple C++ console-based application for demonstrating **Sorting** and **Searching** algorithms using an array. It allows the user to input data and then apply various algorithms interactively.
 
