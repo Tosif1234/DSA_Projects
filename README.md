@@ -275,7 +275,7 @@ Output :
 
 ![Program Output](Categorizing/images/1.png)
 
-3.Selection Sort
+2.Selection Sort
 
 Output : 
 
