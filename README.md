@@ -1,11 +1,5 @@
-## Project 11 : Categorizing (Linkedlist & Sorting & Searching)
-
-This is a simple C++ console-based application for demonstrating **Linkedlist** **Sorting** and **Searching** algorithms using an array. It allows the user to input data and then apply various algorithms interactively.
-
+# Project 11 : Categorizing (Linkedlist & Sorting & Searching)
 ---
-
-#  Data Structures Project in C++
-
 This project is a console-based C++ application that demonstrates essential **Data Structures and Algorithms** through:
 
 -  **Singly Linked List** operations (CRUD)
@@ -701,58 +695,90 @@ int main()
 
 Below is an actual run of the program in the terminal:
 
-1.Insert Array 
+Output : Start
 
-Output : 
+![Program Output](Final-project/images/1.png)
 
-![Program Output](Categorizing/images/1.png)
+Output : In LinkedList
 
-2.Selection Sort
+![Program Output](Final-project/images/2.png)
 
-Output : 
+Output : Insert Node At begining
 
-![Program Output](Categorizing/images/2.png)
+![Program Output](Final-project/images/3.png)
 
-if Alerdy Sorted...
+Output : Insert Node At Ending
 
-![Program Output](Categorizing/images/2-1.png)
+![Program Output](Final-project/images/4.png)
 
-3.Merge Sort
+Output : Insert Node At Any Position
 
-Output : 
+![Program Output](Final-project/images/5.png)
 
-![Program Output](Categorizing/images/3.png)
+Output : Update At Any Position
 
-if Alerdy Sorted...
+![Program Output](Final-project/images/6.png)
 
-![Program Output](Categorizing/images/2-1.png)
+Output : Delete At Begining
 
-4.Linear Seach( No need Sorted Array )
+![Program Output](Final-project/images/7.png)
 
-Output : 
+Output : Delete At Ending
 
-![Program Output](Categorizing/images/4.png)
+![Program Output](Final-project/images/8.png)
 
-5.Binary Search If Array Is Not Sorted...
+Output : Delete At Any Position
 
-Output :
+![Program Output](Final-project/images/9.png)
 
-![Program Output](Categorizing/images/6-1.png)
+Output : View LinkedList
 
-If Array is sorted...
+![Program Output](Final-project/images/10.png)
 
-Output : 
+Output : Exiting LinkedList
 
-![Program Output](Categorizing/images/5.png)
+![Program Output](Final-project/images/11.png)
 
-6.Display Array
+Output : Sorting
 
-Output : 
+![Program Output](Final-project/images/12.png)
 
-![Program Output](Categorizing/images/6.png)
+Output : Choosing Quick Sort
 
-0.Exit..
+![Program Output](Final-project/images/13.png)
 
-Output : 
+Output : Choosing Merge sort Showing Already sorted
 
-![Program Output](Categorizing/images/7.png)
+![Program Output](Final-project/images/14.png)
+
+Output : Choosing Merge sort Again
+
+![Program Output](Final-project/images/15.png)
+
+Output : View Array ...
+
+![Program Output](Final-project/images/16.png)
+
+Output : Exiting Sorting ...
+
+![Program Output](Final-project/images/17.png)
+
+Output : Searching
+
+![Program Output](Final-project/images/18.png)
+
+Output : Choosing Linear Search
+
+![Program Output](Final-project/images/19.png)
+
+Output : Choosing Binary Search
+
+![Program Output](Final-project/images/20.png)
+
+Output : Exiting Searching
+
+![Program Output](Final-project/images/21.png)
+
+Output : Exiting Programme
+
+![Program Output](Final-project/images/22.png)
