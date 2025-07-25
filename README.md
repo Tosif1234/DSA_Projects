@@ -1,46 +1,113 @@
 # Project 11 : Categorizing (Linkedlist & Sorting & Searching)
----
-This project is a console-based C++ application that demonstrates essential **Data Structures and Algorithms** through:
 
--  **Singly Linked List** operations (CRUD)
--  **Sorting Algorithms** (Quick Sort & Merge Sort)
--  **Searching Algorithms** (Linear & Binary Search)
+This is a C++ console-based application that demonstrates **Data Structures** and **Algorithms** using Object-Oriented Programming (OOP).  
+It provides an interactive menu to perform operations on:
 
----
-
-##  Features
-
-###  Linked List (Singly)
-Perform CRUD operations:
-- Insert at beginning, end, or any position
-- Update node data at any position
-- Delete node from beginning, end, or specific position
-- View/traverse the list
-
-###  Sorting
-Includes:
-- Quick Sort
-- Merge Sort  
-Before applying binary search, the array is auto-checked for sorting and prompts user to sort if needed.
-
-###  Searching
-Includes:
-- Linear Search
-- Binary Search  
-(Binary search is allowed only after sorting the array.)
+-  **Singly Linked List (CRUD)**
+-  **Sorting Algorithms (Quick Sort, Merge Sort)**
+-  **Searching Algorithms (Linear, Binary)**
 
 ---
 
-## 🧪 How to Run
+---
 
-1. **Clone or Download** this repository.
-2. Use any C++ compiler like `g++`, or run in any C++ IDE (CodeBlocks, Visual Studio, etc.)
-3. Compile and Run the code:
+## ✨ Features
 
+| Module        | Description |
+|---------------|-------------|
+|  Linked List | Insert, delete, update, and view elements dynamically |
+|  Sorting     | Sort arrays using Quick Sort and Merge Sort |
+|  Searching   | Search elements using Linear and Binary Search |
+|  Interactive | Menu-driven interface with input validation and success messages |
+
+---
+
+## 📌 Overview
+
+This project is built using **classes and objects** in C++. It provides a hands-on experience with:
+
+- Pointers and dynamic memory
+- Recursive sorting algorithms
+- Searching in both sorted and unsorted arrays
+- Singly Linked List operations
+
+This makes it ideal for beginners learning DSA in C++.
+
+
+## 📊 Algorithms Used
+
+### 🔸 Merge Sort (Divide & Conquer)
+- Recursively divides the array in half
+- Merges sorted halves
+- Time Complexity: `O(n log n)`
+
+### 🔸 Quick Sort (Divide & Conquer)
+- Selects pivot and partitions array
+- Recursively sorts left and right halves
+- Time Complexity: `O(n log n)` (avg), `O(n²)` (worst)
+
+### 🔸 Linear Search
+- Iterates over each element
+- Works on **unsorted arrays**
+
+### 🔸 Binary Search
+- Efficient search in **sorted arrays only**
+- Uses divide and conquer
+- Time Complexity: `O(log n)`
+
+---
+
+## 🔧 Functions Breakdown
+
+### 🔹 Linked List Class (`linkedlist`)
+
+| Function Name            | Description |
+|--------------------------|-------------|
+| `insertAtBeginning(ele)` | Inserts a node at the start |
+| `insertAtEnding(ele)`    | Inserts a node at the end |
+| `inerstAtAnyPosition(ele, pos)` | Inserts at specific position |
+| `updateAtAnyPosition(pos, ele)` | Updates the value at given position |
+| `deleteAtBegining()`     | Deletes first node |
+| `deleteAtEnding()`       | Deletes last node |
+| `deleteAtAnyPosition(pos)` | Deletes node at given position |
+| `viewList()`             | Displays the linked list |
+
+### 🔹 Sorting Class (`Sorting`)
+
+| Function Name       | Description |
+|---------------------|-------------|
+| `mergeSort(arr, l, r)` | Recursively sorts using Merge Sort |
+| `quickSort(arr, l, r)` | Recursively sorts using Quick Sort |
+| `merge(...)`        | Helper for merge sort |
+| `partition(...)`    | Helper for quick sort |
+| `isSorted(arr)`     | Checks if array is already sorted |
+| `display(arr)`      | Prints the array |
+
+### 🔹 Searching Class (`Searching`)
+
+| Function Name       | Description |
+|---------------------|-------------|
+| `linearSearch(arr, size, key)` | Searches using linear search |
+| `binarySearch(arr, size, key)` | Searches using binary search |
+| `isSorted(arr)`     | Checks if array is sorted before binary search |
+
+---
+
+## 🚀 How to Run
+
+### 🖥️ Step-by-step:
+
+1. Clone this repo or download the `.cpp` file
+2. Open in your preferred C++ IDE (CodeBlocks / VSCode)
+3. Compile and Run the file
+
+### 📌 For terminal/CLI:
 ```bash
 g++ main.cpp -o ds_project
 ./ds_project
-```
+ ```
+---
+
 ## Our Code
 
 ```cpp
